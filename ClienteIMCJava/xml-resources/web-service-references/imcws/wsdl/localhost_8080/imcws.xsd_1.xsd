@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/3.0.2 (RELEASE-3.0.2-4d220c5; 2021-08-02T05:18:16+0000) JAXWS-RI/3.0.2 JAXWS-API/3.0.1 JAXB-RI/3.0.2 JAXB-API/3.0.1 git-revision#4d220c5. --><xs:schema xmlns:tns="http://imcws.mycompany.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://imcws.mycompany.com/">
+
+<xs:element name="calcularIMC" type="tns:calcularIMC"/>
+
+<xs:element name="calcularIMCResponse" type="tns:calcularIMCResponse"/>
+
+<xs:element name="categoriaIMC" type="tns:categoriaIMC"/>
+
+<xs:element name="categoriaIMCResponse" type="tns:categoriaIMCResponse"/>
+
+<xs:complexType name="categoriaIMC">
+<xs:sequence>
+<xs:element name="imc" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="categoriaIMCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calcularIMC">
+<xs:sequence>
+<xs:element name="peso" type="xs:double"/>
+<xs:element name="altura" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calcularIMCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
